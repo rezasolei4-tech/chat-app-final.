@@ -20,6 +20,9 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Accept Android SDK Licenses
+        run: yes | sdkmanager --licenses
+
       - name: Install Cordova
         run: npm install -g cordova
 
