@@ -22,11 +22,11 @@ jobs:
         with:
           packages: ''
 
-      - name: Accept Android SDK Licenses
-        run: yes | sdkmanager --licenses
-
       - name: Install Cordova
         run: npm install -g cordova
+
+      - name: Check Files
+        run: ls -la
 
       - name: Add Android Platform
         run: cordova platform add android
